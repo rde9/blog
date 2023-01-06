@@ -1,10 +1,8 @@
 import { useEffect, useRef } from 'react'
 import Link from 'next/link'
 import BLOG from '@/blog.config'
-import { useLocale } from '@/lib/locale'
 
 const NavBar = () => {
-  const locale = useLocale()
   const links = [
     { id: 0, name: 'Blog', to: BLOG.path || '/', show: true },
     { id: 1, name: 'About', to: '/about', show: BLOG.showAbout },

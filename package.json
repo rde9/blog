@@ -20,6 +20,7 @@
     "postbuild": "next-sitemap --config next-sitemap.config.js"
   },
   "dependencies": {
+    "@docsearch/react": "3",
     "axios": ">=0.21.1",
     "feed": "^4.2.2",
     "gitalk": "^1.7.2",

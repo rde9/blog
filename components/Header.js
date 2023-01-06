@@ -2,18 +2,20 @@ import { useEffect, useRef } from 'react'
 import Link from 'next/link'
 import BLOG from '@/blog.config'
 import { useLocale } from '@/lib/locale'
+import { DocSearch } from '@docsearch/react';
+import '@docsearch/css';
 
 const NavBar = () => {
   const locale = useLocale()
   const links = [
-    { id: 0, name: locale.NAV.INDEX, to: BLOG.path || '/', show: true },
-    { id: 1, name: locale.NAV.ABOUT, to: '/about', show: BLOG.showAbout },
-    { id: 2, name: locale.NAV.RSS, to: '/feed', show: true },
-    { id: 3, name: locale.NAV.SEARCH, to: '/search', show: true }
+    { id: 0, name: 'Blog', to: BLOG.path || '/', show: true },
+    { id: 1, name: 'About', to: '/about', show: BLOG.showAbout },
+    { id: 2, name: 'RSS', to: '/feed', show: true },
+    // { id: 3, name: locale.NAV.SEARCH, to: '/search', show: true }
   ]
   return (
     <div className="flex-shrink-0">
-      <ul className="flex flex-row">
+      <ul className="flex flex-row items-center">
         {links.map(
           link =>
             link.show && (
@@ -27,6 +29,11 @@ const NavBar = () => {
               </li>
             )
         )}
+        <DocSearch
+          appId="747Z618EVZ"
+          indexName="blog"
+          apiKey="b23d692c43bf10c8c7874bde9f11bfd0"
+        />
       </ul>
     </div>
   )

@@ -4,7 +4,7 @@ import BLOG from '@/blog.config'
 
 const NavBar = () => {
   const links = [
-    { id: 0, name: 'Blog', to: BLOG.path || '/', show: true },
+    { id: 0, name: 'Home', to: BLOG.path || '/', show: true },
     { id: 1, name: 'About', to: '/about', show: BLOG.showAbout },
     { id: 2, name: 'RSS', to: '/feed', show: true },
     { id: 3, name: 'Search', to: '/search', show: true }

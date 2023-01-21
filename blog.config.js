@@ -16,7 +16,7 @@ const BLOG = {
   showAbout: true,
   showArchive: true,
   autoCollapsedNavBar: false, // The automatically collapsed navigation bar
-  ogImageGenerateURL: 'https://og-image-craigary.vercel.app', // The link to generate OG image, don't end with a slash
+  ogImageGenerateURL: 'https://vercel-og-nextjs-rde9.vercel.app', // The link to generate OG image, don't end with a slash
   socialLink: '',
   seo: {
     keywords: [],

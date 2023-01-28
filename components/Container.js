@@ -46,9 +46,7 @@ const Container = ({ children, layout, fullWidth, ...customMeta }) => {
         <meta name="twitter:title" content={meta.title} />
         <meta
           name="twitter:image"
-          content={`${BLOG.ogImageGenerateURL}/${encodeURIComponent(
-            meta.title
-          )}.png?theme=dark&md=1&fontSize=125px&images=https%3A%2F%2Fnobelium.vercel.app%2Flogo-for-dark-bg.svg`}
+          content={`${BLOG.ogImageGenerateURL}/api/og?title=${encodeURIComponent(meta.title)}`}
         />
         {meta.type === 'article' && (
           <>
